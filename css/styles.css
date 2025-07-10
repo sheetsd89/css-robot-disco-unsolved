@@ -2,40 +2,276 @@ body {
   background-color: #21222c;
 }
 
-/* 👇👇👇 Paste the styles of your Fancy Robot from the "Position it right" assignment here 👇👇👇 */
-
 .robot-container {
+  padding: 30px;
+  margin: 50px;
 }
 
 .robot-face-shape {
+  width: 300px;
+  height: 300px;
+  background-image: url(https://picsum.photos/seed/picsum/300/300);
+  border-radius: 150px / 150px;
+  border: 3px solid yellow;
+  margin: 0 auto;
+  position: relative;
 }
 
 .robot-eye-left {
+  --s: 30deg;
+  --p: 240deg;
+  height: 60px;
+  width: 50px;
+  border-radius: 50%;
+  background: #851560;
+  mask: conic-gradient(
+    from var(--s),
+    #0000,
+    #000 1deg var(--p),
+    #0000 calc(var(--p) + 1deg)
+  );
+  border: 2px solid blue;
+  background-color: green;
+  position: relative;
+  margin: 60px 60px;
 }
 
 .robot-eye-right {
+  width: 80px;
+  height: 40px;
+  border: 3px solid green;
+  background-image: linear-gradient(to right, #403b4a, #e7e9bb);
+  position: relative;
+  margin: -110px 180px;
 }
 
 .robot-ear-left {
+  --s: 50px;
+  height: 100px;
+  width: 100px;
+  clip-path: polygon(
+    0 0,
+    var(--s) 0,
+    100% 50%,
+    var(--s) 100%,
+    0 100%,
+    calc(100% - var(--s)) 50%
+  );
+  background: #1b382d;
+  border: 3px solid salmon;
+  position: absolute;
+  margin: 70px -100px;
 }
 
 .robot-ear-right {
+  --s: 50px;
+  height: 100px;
+  width: 100px;
+  clip-path: polygon(
+    100% 0,
+    calc(100% - var(--s)) 0,
+    0 50%,
+    calc(100% - var(--s)) 100%,
+    100% 100%,
+    var(--s) 50%
+  );
+  background: #5e9fa3;
+  border: 6px solid black;
+  position: absolute;
+  margin: 70px 295px;
 }
 
 .robot-nose {
-}
-
-.robot-nose:before {
-}
-
-.robot-nose:after {
+  height: 20%;
+  width: 20%;
+  clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+  background: rgb(134, 164, 91);
+  opacity: 50%;
+  margin: 120px;
+  border: 5px solid blueviolet;
+  position: absolute;
 }
 
 .robot-teeth {
+  padding: 0;
+  position: relative;
+  margin: 200px 75px;
 }
 
-.robot-tooth {
+.robot-tooth-one {
+  --p: 5px;
+  height: 20px;
+  width: 20px;
+  clip-path: polygon(var(--p) 0, calc(100% - var(--p)) 0, 100% 100%, 0 100%);
+  background: #542437;
+  position: absolute;
+  margin: 0 10px;
+}
+
+.robot-tooth-two {
+  --p: 5px;
+  height: 20px;
+  width: 20px;
+  clip-path: polygon(var(--p) 0, calc(100% - var(--p)) 0, 100% 100%, 0 100%);
+  background: #542437;
+  position: absolute;
+  margin: 0 30px;
+}
+
+.robot-tooth-three {
+  --p: 5px;
+  height: 20px;
+  width: 20px;
+  clip-path: polygon(var(--p) 0, calc(100% - var(--p)) 0, 100% 100%, 0 100%);
+  background: #542437;
+  position: absolute;
+  margin: 0 50px;
+}
+
+.robot-tooth-four {
+  --p: 5px;
+  height: 20px;
+  width: 20px;
+  clip-path: polygon(var(--p) 0, calc(100% - var(--p)) 0, 100% 100%, 0 100%);
+  background: #542437;
+  position: absolute;
+  margin: 0 70px;
+}
+
+.robot-tooth-five {
+  --p: 5px;
+  height: 20px;
+  width: 20px;
+  clip-path: polygon(var(--p) 0, calc(100% - var(--p)) 0, 100% 100%, 0 100%);
+  background: #542437;
+  position: absolute;
+  margin: 0 90px;
+}
+
+.robot-tooth-six {
+  --p: 5px;
+  height: 20px;
+  width: 20px;
+  clip-path: polygon(var(--p) 0, calc(100% - var(--p)) 0, 100% 100%, 0 100%);
+  background: #542437;
+  position: absolute;
+  margin: 0 110px;
+}
+
+.robot-tooth-seven {
+  --p: 5px;
+  height: 20px;
+  width: 20px;
+  clip-path: polygon(var(--p) 100%, calc(100% - var(--p)) 100%, 100% 0, 0 0);
+  background: #542437;
+  position: absolute;
+  margin: 20px 10px;
+}
+
+.robot-tooth-eight {
+  --p: 5px;
+  height: 20px;
+  width: 20px;
+  clip-path: polygon(var(--p) 100%, calc(100% - var(--p)) 100%, 100% 0, 0 0);
+  background: #542437;
+  position: absolute;
+  margin: 20px 30px;
+}
+
+.robot-tooth-nine {
+  --p: 5px;
+  height: 20px;
+  width: 20px;
+  clip-path: polygon(var(--p) 100%, calc(100% - var(--p)) 100%, 100% 0, 0 0);
+  background: #542437;
+  position: absolute;
+  margin: 20px 50px;
+}
+
+.robot-tooth-ten {
+  --p: 5px;
+  height: 20px;
+  width: 20px;
+  clip-path: polygon(var(--p) 100%, calc(100% - var(--p)) 100%, 100% 0, 0 0);
+  background: #542437;
+  position: absolute;
+  margin: 20px 70px;
+}
+
+.robot-tooth-eleven {
+  --p: 5px;
+  height: 20px;
+  width: 20px;
+  clip-path: polygon(var(--p) 100%, calc(100% - var(--p)) 100%, 100% 0, 0 0);
+  background: #542437;
+  position: absolute;
+  margin: 20px 90px;
+}
+
+.robot-tooth-twelve {
+  --p: 5px;
+  height: 20px;
+  width: 20px;
+  clip-path: polygon(var(--p) 100%, calc(100% - var(--p)) 100%, 100% 0, 0 0);
+  background: #542437;
+  position: absolute;
+  margin: 20px 110px;
 }
 
 .robot-hair-style {
+  height: 100px;
+  width: 300px;
+  position: relative;
+  margin: 100px auto 0 auto;
+}
+
+.robot-hair-one {
+  height: 30px;
+  width: 30px;
+  background-color: rgb(77, 77, 56);
+  border-radius: 25%;
+  position: absolute;
+  margin: 100px 0;
+}
+
+.robot-hair-two {
+  height: 40px;
+  width: 40px;
+  background-color: yellow;
+  position: absolute;
+  margin: 80px 40px;
+}
+
+.robot-hair-three {
+  height: 4.1em;
+  width: 2.2em;
+  background-color: pink;
+  position: absolute;
+  border-radius: 50%;
+  margin: 30px 95px;
+}
+
+.robot-hair-one-1 {
+  height: 30px;
+  width: 30px;
+  background-color: rgb(77, 77, 56);
+  position: absolute;
+  border-radius: 25%;
+  margin: 100px 270px;
+}
+
+.robot-hair-two-1 {
+  height: 40px;
+  width: 40px;
+  background-color: yellow;
+  position: absolute;
+  margin: 80px 220px;
+}
+.robot-hair-three-1 {
+  height: 4.1em;
+  width: 2.2em;
+  background-color: pink;
+  position: absolute;
+  border-radius: 50%;
+  margin: 30px 160px;
 }

@@ -1,0 +1,91 @@
+@keyframes eye-blink {
+  from {
+    transform: scaleY(1);
+  }
+  to {
+    transform: scaleY(0.1);
+  }
+}
+
+.robot-eye-right {
+  animation: eye-blink 2s ease-in-out infinite alternate;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(45deg);
+  }
+}
+
+.robot-eye-left {
+  animation: rotate 2s ease-in-out infinite alternate;
+}
+
+@keyframes disappear {
+  from {
+    opacity: 50%;
+  }
+  to {
+    opacity: 0%;
+  }
+}
+
+.robot-nose {
+  animation: disappear 2s ease-in-out 2s infinite alternate;
+}
+
+@keyframes smile {
+  from {
+    transform: translate(0);
+  }
+  to {
+    transform: translate(30px);
+  }
+}
+
+.robot-teeth {
+  animation: smile 2s ease-in infinite alternate;
+}
+
+@keyframes scale {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.5);
+  }
+}
+
+.robot-hair-style {
+  animation: scale 2s ease-in infinite alternate;
+}
+
+@keyframes color-change-one {
+  from {
+    background-color: #1b382d;
+    border: 3px solid salmon;
+  }
+  to {
+    background-color: #5e9fa3;
+    border: 6px solid black;
+  }
+}
+
+.robot-ear-left:hover {
+  animation: color-change-one 3s ease-in-out infinite alternate;
+}
+
+@keyframes color-change-two {
+  from {
+    background-color: #5e9fa3;
+    border: 6px solid black;
+  }
+  to {
+    background-color: #1b382d;
+    border: 3px solid salmon;
+  }
+}
+
+.robot-ear-right:hover {
+  animation: color-change-two 3s ease-in-out infinite alternate;
+}
